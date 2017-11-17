@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://soap.adaming.fr/" xmlns:tns="http://soap.adaming.fr/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="calculSomme" type="tns:calculSomme"/>
+
+  <xs:element name="calculSommeResponse" type="tns:calculSommeResponse"/>
+
+  <xs:complexType name="calculSomme">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculSommeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

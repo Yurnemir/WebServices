@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>03_WebService_SOAP_Tomcat</display-name>
+
+<!-- chargement du listener de la servlet jaxws -->
+<listener>
+	<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+</listener>
+
+<!-- declaration de la servlet soap de jaxws-->
+<servlet>
+	<servlet-name>SOAPServlet</servlet-name>
+	<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>SOAPServlet</servlet-name>
+	<url-pattern>/urlWebService</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
