@@ -24,10 +24,15 @@ public class EtudiantBean {
 	@PostConstruct
 	public void init(){
 		System.out.println("Test");
-		etudiant = new Etudiant();
 		liste = etuWS.getEtudiants();
 	}
+	
+	public EtudiantBean() {
+		super();
+		etudiant = new Etudiant();
+	}
 
+	//GetSetters
 	public Etudiant getEtudiant() {
 		return etudiant;
 	}
@@ -44,4 +49,36 @@ public class EtudiantBean {
 		this.liste = liste;
 	}
 
+	public IEtudiantWebService getEtuWS() {
+		return etuWS;
+	}
+
+	public void setEtuWS(IEtudiantWebService etuWS) {
+		this.etuWS = etuWS;
+	}
+	
+	//methodes metier
+	public String addEtudiant(){	
+		this.etudiant = etuWS.addEtudiant(etudiant);
+		liste = etuWS.getEtudiants();
+		return "ajout";
+	}
+	
+	public String getEtudiantById(){
+		System.out.println(etudiant);
+		this.etudiant = etuWS.getEtudiantById(etudiant.getId());
+		return "recherche";
+	}
+	
+	public String modEtudiant(){
+		this.etudiant = etuWS.updateEtudiant(etudiant);
+		liste = etuWS.getEtudiants();
+		return "modifier";
+	}
+
+	public String delEtudiant(){
+		etuWS.deleteEtudiant(etudiant);
+		liste = etuWS.getEtudiants();
+		return "supprimer";
+	}
 }

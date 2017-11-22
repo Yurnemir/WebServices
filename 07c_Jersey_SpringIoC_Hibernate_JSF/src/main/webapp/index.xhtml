@@ -10,7 +10,15 @@
 <title>Test Title</title>
 </h:head>
 <h:body>
-<h1>Test?</h1>
+
+<p:breadCrumb>
+    <p:menuitem value="Liste" url="index.xhtml" />
+    <p:menuitem value="Rechercher" url="recherche.xhtml" />
+    <p:menuitem value="Ajouter" url="ajout.xhtml" />
+    <p:menuitem value="Modifier" url="modifier.xhtml" />
+    <p:menuitem value="Supprimer" url="supprimer.xhtml" />
+</p:breadCrumb>
+
 <h:form>
 	<p:dataTable var="etudiant" value="#{etuMB.liste}">
 		<p:column headerText="Id">
@@ -20,9 +28,13 @@
 		<p:column headerText="Nom">
 			<h:outputText value="#{etudiant.nom}"/>
 		</p:column>
-		blabla
+		
 		<p:column headerText="Prenom">
 			<h:outputText value="#{etudiant.prenom}"/>
+		</p:column>
+		
+		<p:column headerText="Age">
+			<h:outputText value="#{etudiant.age}"/>
 		</p:column>
 	</p:dataTable>
 </h:form>

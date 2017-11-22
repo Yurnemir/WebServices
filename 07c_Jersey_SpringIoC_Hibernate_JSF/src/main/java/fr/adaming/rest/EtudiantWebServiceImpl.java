@@ -82,7 +82,7 @@ public class EtudiantWebServiceImpl implements IEtudiantWebService {
 		
 		WebResource restResource = restClient.resource("http://localhost:8080/07a_Jersey_SpringIoC_Hibernate_WS");
 		
-		restResource.path("rest/ecole/etudiant").type(MediaType.APPLICATION_JSON).delete(Etudiant.class, etu);
+		restResource.path("rest/ecole/etudiant").type(MediaType.APPLICATION_JSON).accept(MediaType.TEXT_PLAIN).delete(etu);// pas de Classe.class si pas de retour attendu!
 	}
 
 }

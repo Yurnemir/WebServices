@@ -1,0 +1,6 @@
+fr\adaming\rest\PaysRest.class
+fr\adaming\service\PaysServiceImpl.class
+fr\adaming\dao\PaysDAOImpl.class
+fr\adaming\service\IPaysService.class
+fr\adaming\dao\IPaysDAO.class
+fr\adaming\model\Pays.class
