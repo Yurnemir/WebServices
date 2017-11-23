@@ -84,7 +84,7 @@ function ajouterPays(){
 	
 	
 	//utilisation de la xhr de jquery
-	$.ajax({
+	$.ajax({// renvoie l'objet XHR (doc jquery .ajax())
 		type:"POST",
 		url:"http://localhost:8080/08a_SpringMVCRest_SpringIoC_Hibernate/addPays",
 		contentType:"application/json",
