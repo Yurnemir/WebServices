@@ -1,0 +1,26 @@
+<h1 style='color:red;text-align:center'>Liste des Pays</h1>
+
+<h2>{{message}}</h2>
+
+<table class="table table-bordered">
+	<thead>
+	<tr>
+		<td>ID</td>
+		<td>Nom</td>
+		<td>Capitale</td>
+		<td>Population</td>
+		<td>Operations</td>
+	</tr>
+	</thead>
+	
+	<tbody ng-repeat="pays in paysListe">
+	<tr>
+		<td>{{pays.id}}</td>
+		<td>{{pays.nom}}</td>
+		<td>{{pays.capitale}}</td>
+		<td>{{pays.population}}</td>
+		<td><a ng-click="deleteLien(pays)">Supprimer</a>|<a ng-click="updateLien(pays)">Modifier</a></td>
+	</tr>
+	</tbody>
+	
+</table>
